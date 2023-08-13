@@ -12,6 +12,7 @@ const connect = function () {
   // set a message for connection 
   conn.on('connect', () => {
     console.log('Connected to the server! 🐍');
+    conn.write("Name: EEM");
   });
 
   // hanlde incoming data
