@@ -1,9 +1,14 @@
 const net = require("net");
+const { setInterval } = require("timers/promises");
 
 const connect = function () {
   const conn = net.createConnection({
     host: "localhost",
-    port: 50541
+    port: 50541,
+    up: "Move: up",
+    down: "Move: down",
+    left: "Move: left",
+    right: "Move: right"
   });
 
   // interpret incoming data as text
@@ -13,8 +18,14 @@ const connect = function () {
   conn.on('connect', () => {
     console.log('Connected to the server! 🐍');
     conn.write("Name: EEM");
+    // Move up as soon as connected
+    conn.write("Move: up")
+    // 2 second delay to move right
+    setTimeout(() => {
+      conn.write("Move: right")
+    }, 2000)
+  
   });
-
   // hanlde incoming data
   conn.on('data', (data) => {
     console.log(data.toString());
