@@ -18,13 +18,6 @@ const connect = function () {
   conn.on('connect', () => {
     console.log('Connected to the server! 🐍');
     conn.write("Name: EEM");
-    // Move up as soon as connected
-    conn.write("Move: up")
-    // 2 second delay to move right
-    setTimeout(() => {
-      conn.write("Move: right")
-    }, 2000)
-  
   });
   // hanlde incoming data
   conn.on('data', (data) => {
