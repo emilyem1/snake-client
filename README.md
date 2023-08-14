@@ -10,7 +10,7 @@ But wait, there's more! This version adds a twist: multiplayer! Compete with oth
 
 ## Final Product
 
-!["a grey screen with a colourful line representing a snake, and a red dot that it needs to move towards to eat"](snake-screen.png)
+!["a grey screen with a colourful line representing a snake, and a red dot that it needs to move towards to eat"](https://user-images.githubusercontent.com/101762106/260382305-f1eeed46-11a1-4c21-8aff-4b992b0d3c18.png)
 
 
 ## Getting Started
