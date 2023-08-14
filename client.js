@@ -1,14 +1,10 @@
 const net = require("net");
-const { setInterval } = require("timers/promises");
+const { IP, PORT } = require("./constants");
 
 const connect = function () {
   const conn = net.createConnection({
-    host: "localhost",
-    port: 50541,
-    up: "Move: up",
-    down: "Move: down",
-    left: "Move: left",
-    right: "Move: right"
+    host: IP,
+    port: PORT
   });
 
   // interpret incoming data as text
