@@ -1,6 +1,5 @@
-const IP = "localhost"; // for client.js
-
-const PORT = 50541; // for client.js
+const IP = "localhost";
+const PORT = 50541;
 
 module.exports = {
   IP,
