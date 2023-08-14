@@ -1,16 +1,15 @@
 const net = require("net");
 const { IP, PORT } = require("./constants");
 
-const connect = function () {
+// establish ip and port
+const connect = function() {
   const conn = net.createConnection({
     host: IP,
     port: PORT
   });
-
   // interpret incoming data as text
   conn.setEncoding("utf8");
-
-  // set a message for connection 
+  // set a message for connection
   conn.on('connect', () => {
     console.log('Connected to the server! 🐍');
     conn.write("Name: EEM");
@@ -20,13 +19,10 @@ const connect = function () {
     console.log(data.toString());
     conn.end();
   });
-
-  // set a message for disconnection 
+  // set a message for disconnection
   conn.on('end', () => {
     console.log('Disconnected from server 👋');
-  }); 
-
-
+  });
   return conn;
 };
 
